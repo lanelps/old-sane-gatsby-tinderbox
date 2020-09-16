@@ -1,3 +1,3 @@
 # sane-gatsby-tinderbox
 
-Remember to change Sanity project ID, dataset name and project token
+Remember to add environment variables for Sanity project ID, dataset name and project token inside the `web/` folder.
