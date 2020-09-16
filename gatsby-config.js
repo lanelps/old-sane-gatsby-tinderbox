@@ -1,38 +1,29 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
-    title: `Gatsby Tinderbox`,
-    description: `Bare bones boilerplate for Gatsby`,
-    author: `Lane Le Prevost-Smith`,
+    title: `Sane-Gatsby Tinderbox`,
+    description: `Boilerplate for Sanity + Gatsby`,
+    author: `John Smith`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/assets/data`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `${__dirname}/src/assets/images/favicon.jpg`,
+        icon: `${__dirname}/static/favicon.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,
