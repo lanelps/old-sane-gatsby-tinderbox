@@ -7,6 +7,7 @@ module.exports = {
     title: `Sane-Gatsby Tinderbox`,
     description: `Boilerplate for Sanity + Gatsby`,
     author: `John Smith`,
+    siteUrl: 'your-url-here.com',
   },
   plugins: [
     {
