@@ -1,7 +1,11 @@
 import React from "react"
 
-import HelloWorld from '../components/HelloWorld'
+import Layout from "../components/Layout"
 
 export default function Home() {
-  return <HelloWorld />
+  return (
+    <Layout title='Home' page='home' url='/'>
+      <h1>Hello World!</h1>
+    </Layout>
+  )
 }
