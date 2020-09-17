@@ -17,9 +17,7 @@ export default function SEO({ title, url }) {
       sanitySiteSettings {
         siteTitle: title
         description
-        author {
-          name
-        }
+        author
         domain
         keywords
         indexed
@@ -38,7 +36,7 @@ export default function SEO({ title, url }) {
           content: '',
         },
         { name: 'description', content: description },
-        { name: 'author', content: author.name },
+        { name: 'author', content: author },
         {
           name: 'keywords',
           content: `${keywords.map((keyword) => keyword)}`,
