@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Lane Le Prevost-Smith <lanelps@gmail.com>",
+  "author": "Your name here",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
