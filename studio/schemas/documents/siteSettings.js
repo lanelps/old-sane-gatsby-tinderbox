@@ -19,7 +19,7 @@ export default {
     {
       name: 'author',
       title: 'Author',
-      type: 'author',
+      type: 'string',
     },
     {
       name: 'domain',
