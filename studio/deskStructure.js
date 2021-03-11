@@ -5,12 +5,12 @@ export default () =>
     .title('Content')
     .items([
       S.listItem()
-        .title('Site Settings')
-        .icon(() => <Emoji style={{ fontSize: 30 }} text='⚙️' />)
-        .child(
-          S.editor()
-            .schemaType('siteSettings')
-            .documentId('siteSettings')
-            .title('Site Settings')
-        ),
+      .title('Site Settings')
+      .child(
+        S.document()
+          .schemaType('siteSettings')
+          .documentId('siteSettings')
+          .title('Site Settings')
+      ),
+      ...S.documentTypeListItems().filter(listItem => !['siteSettings'].includes(listItem.getId()))
     ])

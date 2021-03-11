@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "blank"
+    "name": "sane-gatsby-tinderbox"
   },
   "api": {
-    "projectId": "w7bdcv2r",
+    "projectId": "ell80k7a",
     "dataset": "production"
   },
   "plugins": [
@@ -26,6 +26,11 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
     }
+
   ]
 }
