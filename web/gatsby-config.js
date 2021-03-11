@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Sane-Gatsby Tinderbox`,
     description: `Boilerplate for Sanity + Gatsby`,
-    author: `John Smith`,
+    author: `Lane Le Prevost-Smith`,
     siteUrl: 'http://example.com',
   },
   plugins: [
