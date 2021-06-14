@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:import/react", "prettier", "prettier/react"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["import", "prettier"],
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    // "indent": ["error", 2, { "SwitchCase": 1 }],
+    "jsx-a11y/media-has-caption": 0,
+    "prettier/prettier": ["error"],
+    "no-param-reassign": 0,
+    "quotes": [2, "backtick"],
+    "radix": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "semi": [2, "always"]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["~assets", "./gatsby/src/assets"],
+        ["~components", "./gatsby/src/components"],
+        ["~context", "./gatsby/src/context"],
+        ["~data", "./gatsby/src/data"],
+        ["~hooks", "./gatsby/src/hooks"],
+        ["~node_modules", "./node_modules"],
+        ["~utils", "./gatsby/src/utils"]
+      ],
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
+}
