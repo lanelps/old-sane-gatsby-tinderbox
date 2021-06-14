@@ -12,5 +12,8 @@ export default () =>
           .documentId('siteSettings')
           .title('Site Settings')
       ),
-      ...S.documentTypeListItems().filter(listItem => !['siteSettings'].includes(listItem.getId()))
+      ...S.documentTypeListItems().filter(listItem => {
+        // console.log(listItem); 
+        return!['siteSettings', 'media.tag'].includes(listItem.getId())
+      })
     ])
