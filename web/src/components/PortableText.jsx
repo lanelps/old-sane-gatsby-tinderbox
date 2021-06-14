@@ -4,7 +4,7 @@ import { getGatsbyImageData } from "gatsby-source-sanity";
 
 import Image from "~components/Image.jsx";
 
-const PortableText = ({ blocks, serializer }) => {
+const PortableText = ({ blocks, serializer, _css }) => {
   const sanityConfig = { projectId: `mszpkrrn`, dataset: `production` };
 
   const [serializers, setSerializers] = useState({
@@ -69,7 +69,11 @@ const PortableText = ({ blocks, serializer }) => {
 
   if (blocks) {
     return (
-      <BlockContent blocks={blocks} serializers={serializer || serializers} />
+      <BlockContent
+        css={_css}
+        blocks={blocks}
+        serializers={serializer || serializers}
+      />
     );
   } else {
     console.error(`Portable Text: Blocks is undefined`);
