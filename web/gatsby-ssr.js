@@ -9,7 +9,7 @@ import './src/styles/main.css'
 import React from "react";
 import AppProvider from "~context/AppContext.jsx";
 
-import "./src/assets/css/tailwind.build.css";
+// import "./src/assets/css/tailwind.build.css";
 
 export const wrapRootElement = ({ element }) => (
   <>

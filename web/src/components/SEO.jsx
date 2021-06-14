@@ -5,7 +5,14 @@ import useSanitySiteSettings from "../hooks/useSanitySiteSettings";
 
 export default function SEO({ title, url }) {
   const {
-    sanitySiteSettings: { siteTitle, author, domain, keywords, indexed },
+    sanitySiteSettings: {
+      siteTitle,
+      author,
+      domain,
+      keywords,
+      indexed,
+      description,
+    },
   } = useSanitySiteSettings();
 
   return (
