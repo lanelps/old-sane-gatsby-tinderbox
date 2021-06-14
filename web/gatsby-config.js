@@ -5,9 +5,14 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Sane-Gatsby Tinderbox`,
+    titleTemplate: `%s - Sane-Gatsby Tinderbox`,
     description: `Boilerplate for Sanity + Gatsby`,
-    author: `Lane Le Prevost-Smith`,
+    author: `Lane Wirihana Le Prevost-Smith`,
     siteUrl: 'http://example.com',
+    keywords: ``,
+    image: `/share.jpg`,
+    fbAppId: ``,
+    twitterUsername: ``
   },
   plugins: [
     {
@@ -19,6 +24,7 @@ module.exports = {
         watchMode: true,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
