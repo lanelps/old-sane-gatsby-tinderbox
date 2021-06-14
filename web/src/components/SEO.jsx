@@ -1,56 +1,41 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react";
+import { Helmet } from "react-helmet";
+
+import useSanitySiteSettings from "../hooks/useSanitySiteSettings";
 
 export default function SEO({ title, url }) {
   const {
-    sanitySiteSettings: {
-      siteTitle,
-      description,
-      author,
-      domain,
-      keywords,
-      indexed,
-    },
-  } = useStaticQuery(graphql`
-    query {
-      sanitySiteSettings {
-        siteTitle: title
-        description
-        author
-        domain
-        keywords
-        indexed
-      }
-    }
-  `)
+    sanitySiteSettings: { siteTitle, author, domain, keywords, indexed },
+  } = useSanitySiteSettings();
+
   return (
     <Helmet
       htmlAttributes={{
-        lang: 'en',
+        lang: "en",
       }}
       title={`${title} | ${siteTitle} `}
       meta={[
         {
-          name: 'google-site-verification',
-          content: '',
+          name: "google-site-verification",
+          content: "",
         },
-        { name: 'description', content: description },
-        { name: 'author', content: author },
+        { name: "description", content: description },
+        { name: "author", content: author },
         {
-          name: 'keywords',
+          name: "keywords",
           content: `${keywords.map((keyword) => keyword)}`,
         },
         {
-          name: 'robots',
-          content: `${indexed ? 'index, follow' : 'noindex, nofollow'}`,
+          name: "robots",
+          content: `${indexed ? "index, follow" : "noindex, nofollow"}`,
         },
         {
-          name: 'googlebot',
-          content: `${indexed ? 'index, follow' : 'noindex, nofollow'}`,
+          name: "googlebot",
+          content: `${indexed ? "index, follow" : "noindex, nofollow"}`,
         },
-      ].concat([])}>
-      <link rel='canonical' href={`${domain}${url && url}`} />
+      ].concat([])}
+    >
+      <link rel="canonical" href={`${domain}${url && url}`} />
     </Helmet>
-  )
+  );
 }
