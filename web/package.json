@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.3.0",
     "@sanity/block-content-to-react": "^3.0.0",
     "browser-monads": "^1.0.0",
-    "gatsby": "^3.7.1",
+    "gatsby": "^3.7.2",
     "gatsby-plugin-emotion": "^6.7.1",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
