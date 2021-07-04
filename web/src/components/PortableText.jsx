@@ -5,7 +5,10 @@ import { getGatsbyImageData } from "gatsby-source-sanity";
 import Image from "~components/Image.jsx";
 
 const PortableText = ({ blocks, serializer, _css }) => {
-  const sanityConfig = { projectId: `mszpkrrn`, dataset: `production` };
+  const sanityConfig = {
+    projectId: process.env.SANITY_PROJECT_ID,
+    dataset: process.env.SANITY_DATASET,
+  };
 
   const [serializers, setSerializers] = useState({
     types: {
